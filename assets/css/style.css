@@ -1,3 +1,37 @@
 #mail-validation {
   margin-bottom: 150px;
 }
+
+#dice-game {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  .dice-box {
+    display: flex;
+    gap: 30px;
+    position: relative;
+
+    & span {
+      font-size: 2rem;
+      position: absolute;
+      left: -180px;
+      top: 30px;
+    }
+  }
+
+  .dice-result {
+    font-size: 4rem;
+  }
+}
+
+.dice {
+  width: 100px;
+  aspect-ratio: 1;
+  text-align: center;
+  line-height: 100px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 2rem;
+}

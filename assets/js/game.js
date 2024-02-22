@@ -7,17 +7,17 @@ let userNumb;
 document.getElementById("dice-attempt").addEventListener("click", function () {
   //Generating random numbers
   computerNumb = Math.floor(Math.random() * 6 + 1);
-  console.log(computerNumb + " computer");
+  document.getElementById("computer-dice").innerHTML = computerNumb;
 
   userNumb = Math.floor(Math.random() * 6 + 1);
-  console.log(userNumb + " user");
+  document.getElementById("user-dice").innerHTML = userNumb;
 
   // Check the larger number
   if (userNumb > computerNumb) {
-    console.log("Hai vinto!");
+    document.querySelector(".dice-result").innerHTML = "Hai Vinto!";
   } else if (userNumb < computerNumb) {
-    console.log("Hai perso");
+    document.querySelector(".dice-result").innerHTML = "Hai Perso!";
   } else {
-    console.log("Nessun vincitore , riprova");
+    document.querySelector(".dice-result").innerHTML = "Nessun vincitore ";
   }
 });
