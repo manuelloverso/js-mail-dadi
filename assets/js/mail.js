@@ -1,3 +1,4 @@
+// MAIL VALIDATION
 //Variables declaration
 const userMail = "geppino@gmail.com";
 const mailArray = [
