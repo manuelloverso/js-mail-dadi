@@ -1,6 +1,6 @@
 // MAIL VALIDATION
 //Variables declaration
-const userMail = "geppino@gmail.com";
+let userMail;
 const mailArray = [
   "giuseppino@gmail.com",
   "pippo@libero.it",
@@ -9,12 +9,21 @@ const mailArray = [
 ];
 console.log(mailArray);
 
-//Loop to scroll through mails
-for (let i = 0; i < mailArray.length; i++) {
-  const mailIndex = mailArray[i];
-  if (userMail == mailIndex) {
-    console.log("Puoi accedere");
-  } else {
-    console.log("La tua mail non è stata trovata, riprova");
+// On Click Check
+document.getElementById("mail-check").addEventListener("click", function () {
+  userMail = document.getElementById("user-mail").value;
+  console.log(userMail);
+  let mailFound = false;
+  //Loop to scroll through mails
+  for (let i = 0; i < mailArray.length; i++) {
+    const mailIndex = mailArray[i];
+    if (userMail == mailIndex) {
+      mailFound = true;
+    }
   }
-}
+  if (mailFound == true) {
+    document.querySelector(".mail-result").innerHTML = "Puoi accedere";
+  } else {
+    document.querySelector(".mail-result").innerHTML = "Riprova";
+  }
+});
